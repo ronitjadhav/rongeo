@@ -2,6 +2,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/navb
 import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
 import React from "react";
 import { AcmeLogo } from "../media/logo.jsx";
+import Link from "next/link";
 
 export default function NavBarNextUI() {
     const socials = [
@@ -25,7 +26,9 @@ export default function NavBarNextUI() {
     return (
         <Navbar shouldHideOnScroll>
             <NavbarBrand>
-                <p className="font-bold text-inherit">Ronit Jadhav</p>
+                <Link href="/" className="font-bold text-inherit hover:scale-125">
+                    Ronit Jadhav
+                </Link>
             </NavbarBrand>
             <NavbarContent justify="end">
                 {socials.map((social, index) => (
