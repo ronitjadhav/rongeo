@@ -19,9 +19,9 @@ export default function HeroSection() {
                     className="underline underline-offset-8 decoration-green-500">{"I'm Ronit Jadhav."}</span>
                 </h1>
                 <p className="md:w-100 text-lg text-gray-300">
-                    Based in Germany, I'm a Geospatial Developer and a Software Engineer. <br/>
+                    Based in Germany, I&apos;m a Geospatial Developer and a Software Engineer. <br/>
                     I love to work with maps, data, and code. <br/>
-                    I'm passionate about open-source, web technologies, and building cool stuff.
+                    I&apos;m passionate about open-source, web technologies, and building cool stuff.
                 </p>
                 <Link href={"mailto:ronitt@pm.me"} className="inline-block group">
                     <div>
