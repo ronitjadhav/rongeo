@@ -26,7 +26,8 @@ export default function HeroSection() {
                     </div>
                 </Link>
             </div>
-            <div className="w-96 h-96 space-y-3 -rotate-[0deg] rounded-full overflow-hidden">
+            <div
+                className="mt-2 sm:mt-4 md:mt-8 lg:mt-16 w-96 h-96 space-y-3 -rotate-[0deg] rounded-full overflow-hidden">
                 <Image src={myImage} alt="My Image" className="w-full h-full object-cover" layout="fill"/>
                 <div className=" glow absolute top-[40%] right-1/2 -z-10"></div>
             </div>
