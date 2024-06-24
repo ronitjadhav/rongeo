@@ -1,20 +1,27 @@
+"use client";
+
 import React from 'react';
 import Link from "next/link";
 import myImage from "@/app/(home)/media/me.png";
 import Image from 'next/image';
+import { TypeAnimation } from 'react-type-animation';
 
 export default function HeroSection() {
     return (
         <div className="min-h-screen flex flex-col-reverse gap-14 lg-gap-0 lg:flex-row items-center justify-between">
             <div className="space-y-10 text-center lg:text-left">
+                <TypeAnimation className={'text-3xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-indigo-500'}
+                    sequence={['Hello!', 1000, 'Hola!', 1000, 'Bonjour!', 1000, 'Namaste!', 1000]}
+                />
                 <h1 className="text-4xl lg:text-7xl font-bold">
                     Nice to meet you! 👋
-                    <br /> <span className="underline underline-offset-8 decoration-green-500">{"I'm Ronit Jadhav."}</span>
+                    <br/> <span
+                    className="underline underline-offset-8 decoration-green-500">{"I'm Ronit Jadhav."}</span>
                 </h1>
                 <p className="md:w-100 text-lg text-gray-300">
-                    {
-                        "Based in Germany, I'm a Geospatial Developer and a Software Engineer. I love to work with maps, data, and code. I'm passionate about open-source, web technologies, and building cool stuff."
-                    }
+                    Based in Germany, I'm a Geospatial Developer and a Software Engineer. <br/>
+                    I love to work with maps, data, and code. <br/>
+                    I'm passionate about open-source, web technologies, and building cool stuff.
                 </p>
                 <Link href={"mailto:ronitt@pm.me"} className="inline-block group">
                     <div>
@@ -26,10 +33,10 @@ export default function HeroSection() {
                     </div>
                 </Link>
             </div>
-            <div
-                className="mt-2 sm:mt-4 md:mt-8 lg:mt-16 w-96 h-96 space-y-3 -rotate-[0deg] rounded-full overflow-hidden">
-                <Image src={myImage} alt="My Image" className="w-full h-full object-cover" layout="fill"/>
-                <div className=" glow absolute top-[40%] right-1/2 -z-10"></div>
+            <div className="relative flex-shrink-0 w-80 h-96 rounded-t-full rounded-b-full overflow-hidden">
+                <Image src={myImage} alt="Ronit Jadhav" className="w-full h-full object-cover" layout="fill"/>
+                <div
+                    className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-green-500 to-indigo-500 opacity-60 w-80 h-96 rounded-t-full rounded-b-full -z-10"></div>
             </div>
         </div>
     );

@@ -18,7 +18,7 @@ export default function Page() {
                             backgroundImage: `url(${berlinImage.src})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
-                            opacity: 0.3,
+                            opacity: 0.4,
                         }}
                     />
                     {/* Content */}
