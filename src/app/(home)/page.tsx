@@ -24,8 +24,8 @@ export default function Page() {
                     />
                     {/* Content */}
                     <div className="max-w-7xl mx-auto p-5 relative z-10">
-                        <NavBarNextUI />
-                        <HeroSection />
+                        <NavBarNextUI/>
+                        <HeroSection/>
 
                     </div>
                     {/* Gradient bar at the bottom */}
@@ -34,7 +34,9 @@ export default function Page() {
                     />
                 </div>
             </div>
-            <Contact />
+            <div id="contact">
+                <Contact/>
+            </div>
         </div>
     );
 }

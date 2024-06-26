@@ -7,6 +7,12 @@ import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 
 export default function HeroSection() {
+    // let's make a function that receive the specific element_id as string and scroll into that element_id
+    const scrolltoHash = function (element_id: string) {
+        const element = document.getElementById(element_id)
+        element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+
     return (
         <div className="min-h-screen flex flex-col-reverse gap-14 lg-gap-0 lg:flex-row items-center justify-between">
             <div className="space-y-10 text-center lg:text-left">
@@ -23,7 +29,7 @@ export default function HeroSection() {
                     I love to work with maps, data, and code. <br/>
                     I&apos;m passionate about open-source, web technologies, and building cool stuff.
                 </p>
-                <Link href={"mailto:ronitt@pm.me"} className="inline-block group">
+                <Link href="#" onClick={(e) => {e.preventDefault(); scrolltoHash('contact');}} className="inline-block group">
                     <div>
                         <h1 className="text-3xl font-bold group-hover:text-green-400 translate-all">
                             Contact me 📬
