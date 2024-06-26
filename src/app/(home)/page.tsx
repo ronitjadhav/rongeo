@@ -7,6 +7,7 @@ import berlinImage from "@/app/(home)/media/berlin.png";
 import Contact from "@/app/(home)/components/contact/contacts";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Skills from "@/app/(home)/components/skills/Skills";
 
 export default function Page() {
     return (
@@ -14,7 +15,7 @@ export default function Page() {
             <div>
                 <ToastContainer theme="dark" position="bottom-right"/>
             </div>
-            <div className="dark:bg-black bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.2] relative">
+            <div className="h-screen dark:bg-black bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.2] relative">
                 {/* Container with gradient background */}
                 <div className="relative">
                     {/* Image overlay with gradient */}
@@ -35,11 +36,14 @@ export default function Page() {
                     </div>
                     {/* Gradient bar at the bottom */}
                     <div
-                        className="h-10 xl:h-32 bg-gradient-to-t from-black absolute -bottom-5 left-0 xl:bottom-0 w-full"
-                    />
+                        className="h-10 xl:h-32 bg-gradient-to-t from-black absolute -bottom-5 left-0 xl:bottom-0 w-full">
+                    </div>
                 </div>
             </div>
-            <div id="contact">
+            <div className="min-h-screen mx-auto p-5 mt-20">
+                <Skills/>
+            </div>
+            <div id="contact" className="min-h-screen mx-auto p-5 mt-20">
                 <Contact/>
             </div>
         </div>
