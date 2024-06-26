@@ -5,10 +5,15 @@ import { HeroHighlight } from "@/app/(home)/components/ui/hero-highlight";
 import NavBarNextUI from "@/app/(home)/components/NavBarNextUI";
 import berlinImage from "@/app/(home)/media/berlin.png";
 import Contact from "@/app/(home)/components/contact/contacts";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Page() {
     return (
         <div className='min-h-screen bg-black overflow-hidden'>
+            <div>
+                <ToastContainer theme="dark" position="bottom-right"/>
+            </div>
             <div className="dark:bg-black bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.2] relative">
                 {/* Container with gradient background */}
                 <div className="relative">
@@ -24,8 +29,8 @@ export default function Page() {
                     />
                     {/* Content */}
                     <div className="max-w-7xl mx-auto p-5 relative z-10">
-                        <NavBarNextUI />
-                        <HeroSection />
+                        <NavBarNextUI/>
+                        <HeroSection/>
 
                     </div>
                     {/* Gradient bar at the bottom */}
@@ -34,7 +39,9 @@ export default function Page() {
                     />
                 </div>
             </div>
-            <Contact />
+            <div id="contact">
+                <Contact/>
+            </div>
         </div>
     );
 }

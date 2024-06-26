@@ -30,6 +30,8 @@ export default function Contact() {
     const handleSendMail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        checkRequired();
+
         if (error.required || error.email) {
             toast.error('Please fill in all required fields correctly.');
             return;

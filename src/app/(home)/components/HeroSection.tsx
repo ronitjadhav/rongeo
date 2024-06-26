@@ -7,6 +7,12 @@ import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 
 export default function HeroSection() {
+    // let's make a function that receive the specific element_id as string and scroll into that element_id
+    const scrolltoHash = function (element_id: string) {
+        const element = document.getElementById(element_id)
+        element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+
     return (
         <div className="min-h-screen flex flex-col-reverse gap-14 lg-gap-0 lg:flex-row items-center justify-between">
             <div className="space-y-10 text-center lg:text-left">
@@ -23,14 +29,37 @@ export default function HeroSection() {
                     I love to work with maps, data, and code. <br/>
                     I&apos;m passionate about open-source, web technologies, and building cool stuff.
                 </p>
-                <Link href={"mailto:ronitt@pm.me"} className="inline-block group">
-                    <div>
-                        <h1 className="text-3xl font-bold group-hover:text-green-400 translate-all">
-                            Contact me 📬
-                        </h1>
-                        <div className="w-40 h-2 bg-green-500 rounded-full "></div>
-                        <div className="w-40 h-2 bg-indigo-500 rounded-full translate-x-2"></div>
-                    </div>
+                <Link href="#" onClick={(e) => {e.preventDefault(); scrolltoHash('contact');}} className="inline-block group">
+                    <button
+                        className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
+    <span className="absolute inset-0 overflow-hidden rounded-full">
+        <span
+            className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"/>
+    </span>
+                        <div
+                            className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-2 px-6 ring-1 ring-white/10 ">
+        <span>
+            Contact me  📬
+        </span>
+                            <svg
+                                fill="none"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                width="20"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M10.75 8.75L14.25 12L10.75 15.25"
+                                    stroke="currentColor"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="1.5"
+                                />
+                            </svg>
+                        </div>
+                        <span
+                            className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"/>
+                    </button>
                 </Link>
             </div>
             <div className="relative flex-shrink-0 w-80 h-96 rounded-t-full rounded-b-full overflow-hidden">
