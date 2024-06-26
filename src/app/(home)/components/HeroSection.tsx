@@ -62,10 +62,12 @@ export default function HeroSection() {
                     </button>
                 </Link>
             </div>
-            <div className="relative flex-shrink-0 w-80 h-96 rounded-t-full rounded-b-full overflow-hidden">
-                <Image src={myImage} alt="Ronit Jadhav" className="w-full h-full object-cover" layout="fill"/>
-                <div
-                    className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-green-500 to-indigo-500 opacity-60 w-80 h-96 rounded-t-full rounded-b-full -z-10"></div>
+            <div className="relative">
+                <div className="relative flex-shrink-0 w-80 h-96 rounded-t-full rounded-b-full overflow-hidden">
+                    <Image src={myImage} alt="Ronit Jadhav" className="w-full h-full object-cover" layout="fill"/>
+                    <div
+                        className="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-green-500 to-indigo-500 opacity-60 w-80 h-96 rounded-t-full rounded-b-full -z-10"></div>
+                </div>
             </div>
         </div>
     );
