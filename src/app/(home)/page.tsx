@@ -4,6 +4,7 @@ import HeroSection from "@/app/(home)/components/HeroSection";
 import { HeroHighlight } from "@/app/(home)/components/ui/hero-highlight";
 import NavBarNextUI from "@/app/(home)/components/NavBarNextUI";
 import berlinImage from "@/app/(home)/media/berlin.png";
+import Contact from "@/app/(home)/components/contact/contacts";
 
 export default function Page() {
     return (
@@ -25,6 +26,7 @@ export default function Page() {
                     <div className="max-w-7xl mx-auto p-5 relative z-10">
                         <NavBarNextUI />
                         <HeroSection />
+
                     </div>
                     {/* Gradient bar at the bottom */}
                     <div
@@ -32,6 +34,7 @@ export default function Page() {
                     />
                 </div>
             </div>
+            <Contact />
         </div>
     );
 }
