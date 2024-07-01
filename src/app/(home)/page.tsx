@@ -12,10 +12,8 @@ import Skills from "@/app/(home)/components/skills/Skills";
 export default function Page() {
     return (
         <div className='min-h-screen bg-black overflow-hidden'>
-            <div>
-                <ToastContainer theme="dark" position="bottom-right"/>
-            </div>
-            <div className="h-screen dark:bg-black bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.2] relative">
+            <ToastContainer theme="dark" position="bottom-right"/>
+            <div className="min-h-screen dark:bg-black bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.2] relative">
                 {/* Container with gradient background */}
                 <div className="relative">
                     {/* Image overlay with gradient */}
@@ -32,7 +30,6 @@ export default function Page() {
                     <div className="max-w-7xl mx-auto p-5 relative z-10">
                         <NavBarNextUI/>
                         <HeroSection/>
-
                     </div>
                     {/* Gradient bar at the bottom */}
                     <div
@@ -40,10 +37,10 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <div className="min-h-screen mx-auto p-5 mt-20">
+            <div className="max-w-7xl mx-auto p-5 mt-10 md:mt-20">
                 <Skills/>
             </div>
-            <div id="contact" className="min-h-screen mx-auto p-5 mt-20">
+            <div id="contact" className="min-h-screen mx-auto p-5 mt-10 md:mt-20">
                 <Contact/>
             </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react"
+import React from "react";
 import {
     SiAngular,
     SiArcgis, SiDocker,
@@ -11,12 +11,11 @@ import {
     SiJest, SiLeaflet,
     SiNextdotjs,
     SiNodedotjs, SiOpenlayers, SiPostgresql, SiPython, SiQgis, SiTypescript,
-} from "react-icons/si"
-import Title from "../ui/Title"
-import { HoverEffect } from "../ui/card-hover-effect"
+} from "react-icons/si";
+import Title from "../ui/Title";
+import { HoverEffect } from "../ui/card-hover-effect";
 
 export default function Skills() {
-
     const skills = [
         {
             text:"ArcGIS",
@@ -66,15 +65,12 @@ export default function Skills() {
             text: "Docker",
             Icon: SiDocker
         }
+    ];
 
-
-    ]
     return (
-        <div className="max-w-5xl mt-15 mx-auto px-8">
+        <div className="max-w-5xl mx-auto px-8 mt-10 md:mt-20">
             <Title text="Skills🔪" className="flex flex-col items-center justify-center -rotate-6"/>
             <HoverEffect items={skills}/>
         </div>
-
-
-    )
-};
+    );
+}
