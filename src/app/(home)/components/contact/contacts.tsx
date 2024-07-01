@@ -1,12 +1,13 @@
 "use client";
 
 import emailjs from '@emailjs/browser';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
 import { Label } from "@/app/(home)/components/ui/label";
 import { Input } from "@/app/(home)/components/ui/input";
 import { cn } from "@/lib/utils";
+import Title from "@/app/(home)/components/ui/Title";
 
 export default function Contact() {
     const [input, setInput] = useState({ name: '', email: '', message: '' });
@@ -65,8 +66,8 @@ export default function Contact() {
 
     return (
         <div className="max-w-lg mx-auto mt-12 p-6 bg-white dark:bg-black shadow-lg rounded-lg">
-            <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-gray-200">Contact Me</h1>
-            <form onSubmit={handleSendMail} className="space-y-4">
+            <Title text="Contact Me 📬" className="flex flex-col items-center justify-center -rotate-6"/>
+            <form onSubmit={handleSendMail} className="space-y-4 mt-14">
                 <LabelInputContainer>
                     <Label htmlFor="name">Name</Label>
                     <Input
