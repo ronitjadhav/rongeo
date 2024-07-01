@@ -5,6 +5,7 @@ import Link from "next/link";
 import myImage from "@/app/(home)/media/me.png";
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
+import { FiMessageCircle } from "react-icons/fi";
 
 export default function HeroSection() {
     // function to scroll to the specific element_id
@@ -35,13 +36,14 @@ export default function HeroSection() {
                     I&apos;m passionate about open-source, web technologies, and building cool stuff.
                 </p>
                 <Link href="#" onClick={(e) => {e.preventDefault(); scrolltoHash('contact');}} className="inline-block group">
-                    <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block">
-                        <span className="absolute inset-0 overflow-hidden rounded-full">
-                            <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"/>
-                        </span>
-                        <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-2 px-6 ring-1 ring-white/10">
-                            <span>Contact me 📬</span>
-                            <svg fill="none" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm font-semibold leading-6 text-white inline-block">
+        <span className="absolute inset-0 overflow-hidden rounded-full">
+            <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"/>
+        </span>
+                        <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-3 px-8 ring-1 ring-white/10">
+                            <FiMessageCircle size={24} />
+                            <span>Contact me</span>
+                            <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
                             </svg>
                         </div>
